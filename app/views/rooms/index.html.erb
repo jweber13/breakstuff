@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Rooms</h1>
+  <% @rooms.each do |room| %>
+    <h2><%= room.name %></h2>
+    <h3>   address: <%= room.address %></h3>
+    <h3>   price: <%= room.price %> yen</h3>
+    <h3>   capacity: <%= room.capacity %></h3>
+  <% end %>
+</div>
