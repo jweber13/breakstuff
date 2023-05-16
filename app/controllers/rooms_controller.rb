@@ -29,6 +29,6 @@ class RoomsController < ApplicationController
 
   # strong params -> white listing the info coming from the form
   def room_params
-    params.require(:room).permit(:name, :address, :capacity, :description, :story, :price)
+    params.require(:room).permit(:name, :address, :capacity, :description, :story, :price, :photo)
   end
 end
