@@ -22,6 +22,15 @@ class BookingsController < ApplicationController
     end
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.status = params[:booking][:status]
+    authorize(@booking)
+    if @booking.save
+      redirect_to owner_bookings_path
+    end
+  end
+
   # strong params -> white listing the info coming from the form
   def booking_params
     params.require(:booking).permit(:date, :number_of_people)
