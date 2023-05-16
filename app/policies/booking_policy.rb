@@ -15,9 +15,13 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
+  def update?
+    user_is_owner?
+  end
+
   private
 
   def user_is_owner?
-    record.user == user
+    record.room.user == user
   end
 end
