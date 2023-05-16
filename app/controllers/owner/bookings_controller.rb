@@ -1,5 +1,10 @@
 class Owner::BookingsController < ApplicationController
   def index
-    @rooms = Room.where(user: current_user)
+    # @owner_rooms = Room.where(user: current_user)
+    # @rooms_bookings = Booking.all.each_with_object([]) do |booking, list|
+    #   list << booking if booking.room.user == current_user # @owner_rooms.include?(booking.room)
+    # end
+
+    @rooms_bookings = policy_scope([:owner, Booking])
   end
 end

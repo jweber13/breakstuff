@@ -1,2 +1,17 @@
 <h1>YO</h1>
 <p><%=@room.name%></p>
+<% if @room.photo.key  %>
+  <%= cl_image_tag @room.photo.key, height: 300, width: 400, crop: :fill %>
+<% else %>
+  <% cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
+<% end %>
+<%=link_to "return to rooms", rooms_path%>
+<p></p>
+<div class="container">
+  <%#= simple_form_for @booking do |f|%>
+    <%= simple_form_for @booking, url: room_bookings_path(@room), method: :post do |f| %>
+      <%= f.input :date %>
+      <%= f.input :number_of_people %>
+      <%= f.submit 'book this room' %>
+    <% end %>
+  </div>
