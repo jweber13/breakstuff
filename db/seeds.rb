@@ -12,7 +12,7 @@ User.destroy_all
 
 new_user = User.create(username: 'joe', email: 'joe@email.com', password: 'password', password_confirmation: 'password')
 new_user1 = User.create(username: 'mathieu', email: 'mathieu@email.com', password: 'password', password_confirmation: 'password')
-
+User.create(username: 'rashon', email: 'rashon@email.com', password: 'password', password_confirmation: 'password')
 
 new_room = Room.new(
   name: 'Shinsetsu Break Room',

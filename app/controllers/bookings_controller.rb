@@ -7,12 +7,14 @@ class BookingsController < ApplicationController
   # end
 
   def create
-    @room = Room.find(params[:id])
+    # raise
+    @room = Room.find(params[:room_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.room = @room
+    # raise
     authorize(@booking)
-
+    # raise
     if @booking.save
       redirect_to rooms_path
     else
