@@ -4,6 +4,14 @@
     <li>
       <%=booking.date%>
       <p>Room <%=booking.room_id%> booked by <%=booking.user_id%> with <%=booking.number_of_people%> people and the status is  <%=booking.status%></p>
+      <%=simple_form_for booking, method: :patch do |f| %>
+        <%=f.input :status, as: :hidden, input_html: {value: "accepted"}, url: owner_bookings_path %>
+        <%=f.submit 'accept'%>
+      <%end%>
+      <%=simple_form_for booking, method: :patch do |f| %>
+        <%=f.input :status, as: :hidden, input_html: {value: "rejected"}, url: owner_bookings_path%>
+        <%=f.submit 'reject'%>
+      <%end%>
     </li>
   <%end%>
 </ul>
