@@ -1,7 +1,9 @@
 <div class="container">
   <h1>Bookable Rooms</h1>
   <%= link_to "add a room", new_room_path%>
-  <% @not_owned_rooms.each do |room| %>
+
+ <!-- <div class="container mt-3">
+<% @not_owned_rooms.each do |room| %>
     <h2><%= link_to room.name, room_path(room)%></h2>
     <% if room.photo.key  %>
       <%= cl_image_tag room.photo.key, height: 300, width: 400, crop: :fill %>
@@ -13,7 +15,37 @@
     <h3>   price: <%= room.price %> yen</h3>
     <h3>   capacity: <%= room.capacity %></h3>
   <% end %>
+    </div>
+  </div>
+</div> -->
+
+<div class="container mt-3">
+<div class="row">
+    <div class="col-8">
+      <div class="cards">
+        <div class="card-grid">
+          <% @not_owned_rooms.each do |room| %>
+            <div class="card-pick mx-auto">
+              <h2><%= link_to room.name, room_path(room)%></h2>
+              <% if room.photo.key  %>
+                <%= cl_image_tag room.photo.key, height: 300, width: 400, crop: :fill %>
+              <% else %>
+                <% cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
+              <% end %>
+               <div class="card-pick-info">
+                <h3> owner: <%= room.user.username%></h3>
+                <h3> address: <%= room.address %></h3>
+                <h3> price: <%= room.price %> yen</h3>
+                <h3> capacity: <%= room.capacity %></h3>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
 </div>
+</div>
+
 <div class="container">
   <h1>My Rooms</h1>
   <% @owned_rooms.each do |room| %>
