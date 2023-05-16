@@ -1,11 +1,15 @@
 class RoomsController < ApplicationController
   def index
     @rooms = policy_scope(Room)
+    @owned_rooms = @rooms.where(user: current_user)
+    @not_owned_rooms = @rooms.where.not(user: current_user)
   end
 
   def show
     @room = Room.find(params[:id])
+    @booking = Booking.new
     authorize @room
+    # authorize @booking
   end
 
   def new
