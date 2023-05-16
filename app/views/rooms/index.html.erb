@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Bookable Rooms</h1>
   <%= link_to "add a room", new_room_path%>
+  <%= link_to 'bookings(as a renter)', bookings_path %>
   <% @not_owned_rooms.each do |room| %>
     <h2><%= link_to room.name, room_path(room)%></h2>
     <% if room.photo.key  %>

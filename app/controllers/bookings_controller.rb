@@ -6,6 +6,10 @@ class BookingsController < ApplicationController
   #   authenticate(@booking)
   # end
 
+  def index
+    @bookings = policy_scope(Booking)
+  end
+
   def create
     @room = Room.find(params[:id])
     @booking = Booking.new(booking_params)
