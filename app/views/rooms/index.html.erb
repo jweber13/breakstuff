@@ -3,7 +3,11 @@
   <%= link_to "add a room", new_room_path%>
   <% @rooms.each do |room| %>
     <h2><%= room.name %></h2>
-    <%= cl_image_tag room.photo.key, height: 300, width: 400, crop: :fill %>
+    <% if room.photo.key  %>
+      <%= cl_image_tag room.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else %>
+      <% cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
+    <% end %>
     <h3>   address: <%= room.address %></h3>
     <h3>   price: <%= room.price %> yen</h3>
     <h3>   capacity: <%= room.capacity %></h3>

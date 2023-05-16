@@ -1,0 +1,12 @@
+<div class="container">
+  <%= simple_form_for @room do |f|%>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :story %>
+    <%= f.input :description %>
+    <%= f.input :capacity %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit 'add new room' %>
+  <% end %>
+</div>
