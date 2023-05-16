@@ -81,7 +81,7 @@ new_room1.user = new_user # the owner is Joe
 new_room2.user = new_user # the owner is Joe
 new_room3.user = new_user # the owner is Joe
 new_room4.user = new_user # the owner is Joe
-new_room5.user = new_user # the owner is Joe
+new_room5.user = new_user1 # the owner is Mathieu
 
 new_room.save
 new_room1.save
