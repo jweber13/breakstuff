@@ -1,0 +1,9 @@
+<h1> YOOOOO</h1>
+<ul>
+  <%@rooms_bookings.each do |booking|%>
+    <li>
+      <%=booking.date%>
+      <p>Room <%=booking.room_id%> booked by <%=booking.user_id%> with <%=booking.number_of_people%> people and the status is  <%=booking.status%></p>
+    </li>
+  <%end%>
+</ul>
