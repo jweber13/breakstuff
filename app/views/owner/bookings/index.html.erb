@@ -7,6 +7,8 @@
       <%=simple_form_for booking, method: :patch do |f| %>
         <%=f.input :status, as: :hidden, input_html: {value: "accepted"}, url: owner_bookings_path %>
         <%=f.submit 'accept'%>
+      <%end%>
+      <%=simple_form_for booking, method: :patch do |f| %>
         <%=f.input :status, as: :hidden, input_html: {value: "rejected"}, url: owner_bookings_path%>
         <%=f.submit 'reject'%>
       <%end%>
