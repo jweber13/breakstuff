@@ -81,7 +81,7 @@ new_room1.user = new_user # the owner is Joe
 new_room2.user = new_user # the owner is Joe
 new_room3.user = new_user # the owner is Joe
 new_room4.user = new_user # the owner is Joe
-new_room5.user = new_user # the owner is Joe
+new_room5.user = new_user1 # the owner is Mathieu
 
 new_room.save
 new_room1.save
@@ -98,3 +98,33 @@ new_booking = Booking.new(
 new_booking.user = new_user1 # the guest is Mathieu
 new_booking.room = new_room
 new_booking.save
+
+# new_room.photo.attach(
+#   filename: 'natto_maki.jpg',
+#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
+# )
+
+# new_room1.photo.attach(
+#   filename: 'natto_maki.jpg',
+#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
+# )
+
+# new_room2.photo.attach(
+#   filename: 'natto_maki.jpg',
+#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
+# )
+
+# new_room3.photo.attach(
+#   filename: 'natto_maki.jpg',
+#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
+# )
+
+# new_room4.photo.attach(
+#   filename: 'natto_maki.jpg',
+#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
+# )
+
+# new_room5.photo.attach(
+#   filename: 'natto_maki.jpg',
+#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
+# )

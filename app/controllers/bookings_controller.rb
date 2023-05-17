@@ -6,6 +6,10 @@ class BookingsController < ApplicationController
   #   authenticate(@booking)
   # end
 
+  def index
+    @bookings = policy_scope(Booking)
+  end
+
   def create
     # raise
     @room = Room.find(params[:room_id])
@@ -19,6 +23,15 @@ class BookingsController < ApplicationController
       redirect_to rooms_path
     else
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.status = params[:booking][:status]
+    authorize(@booking)
+    if @booking.save
+      redirect_to owner_bookings_path
     end
   end
 

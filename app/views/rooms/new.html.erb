@@ -1,12 +1,17 @@
-<div class="container">
-  <%= simple_form_for @room do |f|%>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :story %>
-    <%= f.input :description %>
-    <%= f.input :capacity %>
-    <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit 'add new room' %>
-  <% end %>
+<div class="container mt-3 d-flex justify-content-center">
+  <div class="card col-sm-8 col-md-6">
+    <div class="row p-3 m-2">
+      <%= simple_form_for @room do |f|%>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :story %>
+        <%= f.input :description %>
+        <%= f.input :capacity %>
+        <%= f.input :price %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit 'add new room', class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 </div>
+<%=link_to "view rooms", rooms_path%>
