@@ -38,7 +38,7 @@ new_room1 = Room.new(
 )
 
 new_room2 = Room.new(
-  name: 'Fancy appartement',
+  name: 'Fancy appartment',
   address: 'Chiyoda, Tokyo 100-0005',
   story: 'This appartment belongs to a cheater.',
   description: 'Destroy all the expensive in this appartment. You can also bring
@@ -57,7 +57,7 @@ new_room3 = Room.new(
 )
 
 new_room4 = Room.new(
-  name: 'Apple Store',
+  name: 'Apple Store: come and break our shit',
   address: 'Minato, Tokyo 105-6333',
   story: 'This Apple Store is available to get fucked.',
   description: "If you cannot afford Apple's expensive stuff, come here and destroy everything.
@@ -99,32 +99,32 @@ new_booking.user = new_user1 # the guest is Mathieu
 new_booking.room = new_room
 new_booking.save
 
-# new_room.photo.attach(
-#   filename: 'natto_maki.jpg',
-#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
-# )
+new_room.photo.attach(
+  filename: 'Mexico-Mannequin',
+  io: URI.open('https://res.cloudinary.com/dfv1szuzs/image/upload/v1684292577/Mexico-Mannequin-Plus-Size-Mannequin-with-Matt-Black-or-White-Color_i3itob.webp')
+)
 
-# new_room1.photo.attach(
-#   filename: 'natto_maki.jpg',
-#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
-# )
+new_room1.photo.attach(
+  filename: 'warehouse-break-room',
+  io: URI.open('https://res.cloudinary.com/dfv1szuzs/image/upload/v1684293493/photo-1473023914974-0d98f0798b51_pzolsv.jpg')
+)
 
-# new_room2.photo.attach(
-#   filename: 'natto_maki.jpg',
-#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
-# )
+new_room2.photo.attach(
+  filename: 'fancy-appartment',
+  io: URI.open('https://res.cloudinary.com/dfv1szuzs/image/upload/v1684293506/photo-1512914890251-2f96a9b0bbe2_tzqnkt.jpg')
+)
 
-# new_room3.photo.attach(
-#   filename: 'natto_maki.jpg',
-#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
-# )
+new_room3.photo.attach(
+  filename: 'arcade.jpg',
+  io: URI.open('https://res.cloudinary.com/dfv1szuzs/image/upload/v1684293467/photo-1553640627-57a6de3bf0ff_lxrhp5.jpg')
+)
 
-# new_room4.photo.attach(
-#   filename: 'natto_maki.jpg',
-#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
-# )
+new_room4.photo.attach(
+  filename: 'apple-store',
+  io: URI.open('https://res.cloudinary.com/dfv1szuzs/image/upload/v1684293521/NY_Interior_2284_fp706720_gizy0g.jpg')
+)
 
-# new_room5.photo.attach(
-#   filename: 'natto_maki.jpg',
-#   io: URI.open('https://res.cloudinary.com/dlfyc8yxc/image/upload/v1684147388/natto-maki_fvtdnk.jpg')
-# )
+new_room5.photo.attach(
+  filename: 'Japanese Pottery',
+  io: URI.open('https://res.cloudinary.com/dfv1szuzs/image/upload/v1684307998/main03_nwvnnp.jpg')
+)

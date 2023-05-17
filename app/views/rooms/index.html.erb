@@ -7,10 +7,8 @@
     <div class="col-8">
       <div class="cards">
         <div class="card-grid">
-         <div class="d-flex justify-content-center py-3 px-1">
-    <h1> <strong>Bookable Rooms</strong></h1>
-  </div>
-          <% @not_owned_rooms.each do |room| %>
+             <h1><strong>BOOKABLE ROOMS</strong></h1>
+           <% @not_owned_rooms.each do |room| %>
             <div class="card-pick mx-auto">
               <h2><%= link_to room.name, room_path(room), class: "text-decoration-none text text-reset link-danger"%></h2>
               <% if room.photo.key  %>
@@ -37,7 +35,7 @@
     <div class="col-8">
       <div class="cards">
         <div class="card-grid">
-          <h1>My Rooms</h1>
+          <h1> <strong>MY ROOMS</strong></h1>
           <% @owned_rooms.each do |room| %>
             <div class="card-pick mx-auto">
               <h2><%= link_to room.name, room_path(room) %></h2>
@@ -47,10 +45,10 @@
                 <%= cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
               <% end %>
               <div class="card-pick-info">
-                <h3>owner: <%= room.user.username %></h3>
-                <h3>address: <%= room.address %></h3>
-                <h3>price: <%= room.price %> yen</h3>
-                <h3>capacity: <%= room.capacity %></h3>
+                <h3> <strong>Owner:</strong>  <%= room.user.username%></h3>
+                <h3> <strong>Address:</strong>  <%= room.address %></h3>
+                <h3> <strong>Price:</strong> <%= room.price %> yen</h3>
+                <h3><strong>Capacity:</strong>  <%= room.capacity %></h3>
               </div>
             </div>
           <% end %>
