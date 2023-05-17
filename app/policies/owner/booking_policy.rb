@@ -8,5 +8,9 @@ class Owner::BookingPolicy < ApplicationPolicy
         list << booking if booking.room.user == user
       end
     end
+
+    def update?
+      true
+    end
   end
 end
