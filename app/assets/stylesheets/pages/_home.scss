@@ -1,1 +1,88 @@
 // Specific CSS for your home-page
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #181818 !important;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+.alert {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  padding-left: 60px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.banner h2 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.banner p {
+  font-size: 20px;
+  color: yellow;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn-flat {
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #180ad6;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-flat:hover {
+  background: #3429ff;
+  color: white;
+}
+
+.icon {
+
+  padding-bottom: 8px;
+  font-size: 2.0rem;
+  position: left;
+}
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: rgb(0, 0, 0);
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+
+.tags {
+  font-family: 'Oswald', sans-serif;
+  padding: 20px;
+  text-decoration: none;
+}
+
+
+.hammer-header h1 {
+  font-family: 'Road Rage', cursive;
+  font-size: 70px;
+}

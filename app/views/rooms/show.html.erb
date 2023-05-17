@@ -1,18 +1,38 @@
-<h1>YO</h1>
-<p><%=@room.name%></p>
-<% if @room.photo.key  %>
-  <%= cl_image_tag @room.photo.key, height: 300, width: 400, crop: :fill %>
-<% else %>
-  <% cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
-<% end %>
-<%=link_to "return to rooms", rooms_path%>
-<p></p>
-<div class="container">
-  <%= simple_form_for [@room, @booking] do |f|%>
-    <%#= simple_form_for @booking, url: room_bookings_path(@room), method: :post do |f| %>
-      <%= f.input :date %>
-      <%= f.input :number_of_people %>
-      <%= f.submit 'book this room' %>
-    <% end %>
+<div class="page-frame-content">
+  <div class="page-frame-header">
+    <%= render 'shared/navbar'%>
   </div>
-  <%= link_to "view rooms", rooms_path%>
+  <div class="page-frame-body">
+    <div class="container">
+      <h1><%=@room.name%></h1>
+      <p>Description:<%=@room.description%></p>
+      <br>
+      <p>Story: <%=@room.story%></p>
+      <br>
+      <p>Address: <%=@room.address%></p>
+      <br>
+      <p>Price: <%=@room.price%>円 / day</p>
+      <% if @room.photo.key  %>
+        <%= cl_image_tag @room.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </div>
+    <h2>Book this room?</h2>
+    <div class="container mt-3 d-flex justify-content-center">
+      <div class="card col-sm-8 col-md-6">
+        <div class="row p-3 m-3">
+          <%= simple_form_for [@room, @booking] do |f|%>
+            <%= f.input :date %>
+            <%= f.input :number_of_people %>
+            <%= f.submit 'book this room', class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-frame-footer">
+    <%= link_to "view rooms", rooms_path%>
+  </div>
+</div>
+</div>
