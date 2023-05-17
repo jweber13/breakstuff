@@ -1,9 +1,28 @@
-<div class="container">
-  <h1>Your bookings</h1>
-  <% @bookings.each do |booking|%>
-    <p>room: <%= booking.room.name %></p>
-    <p>date: <%= booking.date %></p>
-    <p>number of people: <%= booking.number_of_people %></p>
-  <% end %>
+<div class="page-frame-content">
+  <div class="page-frame-header">
+  </div>
+  <div class="page-frame-body">
+    <h1>Your bookings</h1>
+    <div class="container">
+      <%@bookings.each do |booking|%>
+        <div class="card-booking-container">
+          <div class="card-booking">
+            <% if booking.room.photo.key  %>
+              <%= cl_image_tag booking.room.photo.key, height: 120, width: auto, crop: :fill %>
+            <% else %>
+              <img src='https://res.cloudinary.com/dfv1szuzs/image/upload/v1684227581/development/fkzdohnna0ay3tsdb9iyykwrpknq.jpg' style='width: 400'>
+            <% end %>
+            <div class="card-booking-infos">
+              <h2><%=booking.room.name%></h2>
+              <p>Booked by <strong>you</strong> on <strong><%=booking.date%></strong> for <%=booking.number_of_people%> people</p>
+              <p>Status: <strong><%=booking.status%></strong></p>
+            </div>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+  <div class="page-frame-footer">
+    <%= link_to "view rooms", rooms_path%>
+  </div>
 </div>
-<%= link_to "view rooms", rooms_path%>
