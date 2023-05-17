@@ -1,18 +1,24 @@
-<h1>YO</h1>
-<p><%=@room.name%></p>
-<% if @room.photo.key  %>
-  <%= cl_image_tag @room.photo.key, height: 300, width: 400, crop: :fill %>
-<% else %>
-  <% cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
-<% end %>
-<%=link_to "return to rooms", rooms_path%>
-<p></p>
-<div class="container">
-  <%= simple_form_for [@room, @booking] do |f|%>
-    <%#= simple_form_for @booking, url: room_bookings_path(@room), method: :post do |f| %>
-      <%= f.input :date %>
-      <%= f.input :number_of_people %>
-      <%= f.submit 'book this room' %>
-    <% end %>
+<div class="page-frame-content">
+  <div class="page-frame-header">
   </div>
-  <%= link_to "view rooms", rooms_path%>
+  <div class="page-frame-body">
+    <h1><%=@room.name%></h1>
+    <% if @room.photo.key  %>
+      <%= cl_image_tag @room.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else %>
+      <% cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
+    <% end %>
+    <div class="container">
+      <%= simple_form_for [@room, @booking] do |f|%>
+        <%#= simple_form_for @booking, url: room_bookings_path(@room), method: :post do |f| %>
+          <%= f.input :date %>
+          <%= f.input :number_of_people %>
+          <%= f.submit 'book this room' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="page-frame-footer">
+      <%= link_to "view rooms", rooms_path%>
+    </div>
+  </div>
+</div>
