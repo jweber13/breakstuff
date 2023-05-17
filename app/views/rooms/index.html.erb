@@ -1,13 +1,14 @@
 <div class="container">
-  <div class="d-flex justify-content-center py-3">
-    <h1>Bookable Rooms</h1>
-  </div>
   <%= link_to "add a room", new_room_path%>
-  <div class="container mt-3">
+  <%=link_to "view bookings", bookings_path%>
+  <div class="container mt-3 i ">
     <div class="d-flex justify-content-center">
       <div class="col-8">
         <div class="cards">
           <div class="card-grid">
+            <div class="d-flex justify-content-center py-3 px-1">
+              <h1> <strong>Bookable Rooms</strong></h1>
+            </div>
             <% @not_owned_rooms.each do |room| %>
               <div class="card-pick mx-auto">
                 <h2><%= link_to room.name, room_path(room), class: "text-decoration-none text text-reset link-danger"%></h2>
@@ -29,27 +30,35 @@
       </div>
     </div>
   </div>
-  <div class="container mt-3 d-flex justify-content-center">
-    <h1 >My Rooms</h1>
-    <% @owned_rooms.each do |room| %>
-      <h2><%= link_to room.name, room_path(room)%></h2>
-      <% if room.photo.key  %>
-        <%= cl_image_tag room.photo.key, height: 300, width: 400, crop: :fill %>
-      <% else %>
-        <img src='https://res.cloudinary.com/dfv1szuzs/image/upload/v1684227581/development/fkzdohnna0ay3tsdb9iyykwrpknq.jpg' width='400'>
-      <% end %>
-      <h3> owner: <%= room.user.username%></h3>
-      <h3>   address: <%= room.address %></h3>
-      <h3>   price: <%= room.price %> yen</h3>
-      <h3>   capacity: <%= room.capacity %></h3>
-    <% end %>
+  <div class="container mt-3">
+    <div class="d-flex justify-content-center">
+      <div class="col-8">
+        <div class="cards">
+          <div class="card-grid">
+            <h1>My Rooms</h1>
+            <% @owned_rooms.each do |room| %>
+              <div class="card-pick mx-auto">
+                <h2><%= link_to room.name, room_path(room) %></h2>
+                <% if room.photo.key %>
+                  <%= cl_image_tag room.photo.key, height: 300, width: 400, crop: :fill %>
+                <% else %>
+                  <%= cl_image_tag "ue8b275gg03z61ydvkz6why3roed", height: 300, width: 400, crop: :fill %>
+                <% end %>
+                <div class="card-pick-info">
+                  <h3>owner: <%= room.user.username %></h3>
+                  <h3>address: <%= room.address %></h3>
+                  <h3>price: <%= room.price %> yen</h3>
+                  <h3>capacity: <%= room.capacity %></h3>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <<<<<<< HEAD
+</div>
+<div class="card">
+  <%= link_to 'bookings(as a owner)', owner_bookings_path %>
+</div>
 <%= link_to "Log out", "/users/sign_out", class: "dropdown-item", data: {turbo_method: :delete} %>
-<html>
-    =======
-    <div class="card"> 
-      <div class="div">
-        <%= link_to 'bookings(as a owner)', owner_bookings_path %>
-        <%# <%= link_to "Log out", "/users/sign_out", class: "dropdown-item", data: {turbo_method: :delete} %>
-        >>>>>>> master
