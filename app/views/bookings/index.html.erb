@@ -9,7 +9,7 @@
         <div class="card-booking-container">
           <div class="card-booking">
             <% if booking.room.photo.key  %>
-              <%= cl_image_tag booking.room.photo.key, height: 120, width: auto, crop: :fill %>
+              <%= cl_image_tag booking.room.photo.key, height: 120, width: 'auto', crop: :fill %>
             <% else %>
               <img src='https://res.cloudinary.com/dfv1szuzs/image/upload/v1684227581/development/fkzdohnna0ay3tsdb9iyykwrpknq.jpg' style='width: 400'>
             <% end %>
