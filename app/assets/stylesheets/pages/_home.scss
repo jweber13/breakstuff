@@ -20,7 +20,7 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
-.banner h2 {
+.banner-info h2 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -29,11 +29,32 @@ body {
   text-decoration: none;
 }
 
-.banner p {
+.banner-info p {
   font-size: 20px;
   color: yellow;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.banner-info p {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.banner-info h2 {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.banner-info .btn {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+div.banner-info {
+  position: fixed;
+  // background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 0 50px;
+  padding-top: 200px;
 }
 
 .btn-flat {
@@ -41,20 +62,14 @@ body {
   padding: 8px 24px;
   border-radius: 4px;
   background: #180ad6;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
   text-decoration: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
 .btn-flat:hover {
   background: #3429ff;
   color: white;
-}
-
-.icon {
-
-  padding-bottom: 8px;
-  font-size: 2.0rem;
-  position: left;
 }
 
 .navbar-lewagon {
@@ -75,14 +90,15 @@ h1 {
   color: white;
 }
 
-.tags {
-  font-family: 'Oswald', sans-serif;
-  padding: 20px;
-  text-decoration: none;
-}
-
 
 .hammer-header h1 {
   font-family: 'Road Rage', cursive;
   font-size: 70px;
+}
+
+.rage-video {
+  position: fixed;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
