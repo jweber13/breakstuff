@@ -1,15 +1,17 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Road+Rage&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Edu+TAS+Beginner:wght@500&family=Open+Sans:wght@300;400&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Road+Rage&display=swap');
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$headers-font: "Work Sans", "Helvetica", "sans-serif";
 $font-size: 1.3em;
 
-h3 {
-  font-size: 1.3rem;
+h1 {
+font-size: 1.3rem;
+color: rgb(212, 155, 11);
 }
 
 // To use a font file (.woff) uncomment following lines
