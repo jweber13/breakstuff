@@ -15,8 +15,8 @@ new_user1 = User.create(username: 'mathieu', email: 'mathieu@email.com', passwor
 User.create(username: 'rashon', email: 'rashon@email.com', password: 'password', password_confirmation: 'password')
 
 new_room = Room.new(
-  name: 'Shinsetsu Break Room',
-  address: '21 Taimei Bldg., 3 Chome-11-6 Roppongi, Minato City, Tokyo 106-0032',
+  name: 'Manequins',
+  address: 'Ginza, Tokyo 170-0002',
   story: 'In the heart of bustling Tokyo, there stood a remarkable refuge called "Shinsetsu Break Room." Nestled amidst
   the towering skyscrapers,
   it offered a sanctuary for those burdened by the weight of toxic coworkers and unrelenting workplace stress.',
@@ -27,7 +27,7 @@ new_room = Room.new(
 )
 
 new_room1 = Room.new(
-  name: 'Warehouse Break Room',
+  name: 'Warehouse',
   address: 'Shibuya, Tokyo 150-0002',
   story: 'This room  was an old warehouse that was converted into a break room. It is located in the heart of the city.
   A lot of people died here because of the toxic fumes. The previous owner was never found.',
@@ -48,7 +48,7 @@ new_room2 = Room.new(
 )
 
 new_room3 = Room.new(
-  name: 'Arcade to break',
+  name: 'Arcade junk',
   address: 'Shinjuku, Tokyo 160-0023',
   story: 'This room is an old game center.',
   description: 'You have at your disposal shotguns, baseball bats to destroy all the machines.',
@@ -57,7 +57,7 @@ new_room3 = Room.new(
 )
 
 new_room4 = Room.new(
-  name: 'Apple Store: come and break our shit',
+  name: 'Apple Store',
   address: 'Minato, Tokyo 105-6333',
   story: 'This Apple Store is available to get fucked.',
   description: "If you cannot afford Apple's expensive stuff, come here and destroy everything.
@@ -67,7 +67,7 @@ new_room4 = Room.new(
 )
 
 new_room5 = Room.new(
-  name: 'Japanese Pottery',
+  name: 'Japanese pottery',
   address: 'Taito, Kyoto 110-0005',
   story: 'This room belongs to the legendary Tanaka Smith.',
   description: 'This room is filled with fragile japanese crafted pottery. Come
