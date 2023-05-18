@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   end
   resources :bookings, except: %i[new create]
   namespace :owner do
-    resources :bookings, only: :index
+    resources :bookings, only: %i[index update] # included update in the resources so owner can accept / reject
   end
 end

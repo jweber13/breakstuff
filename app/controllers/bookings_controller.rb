@@ -17,15 +17,6 @@ class BookingsController < ApplicationController
     end
   end
 
-  def update
-    @booking = Booking.find(params[:id])
-    @booking.status = params[:booking][:status]
-    authorize(@booking)
-    if @booking.save
-      redirect_to owner_bookings_path
-    end
-  end
-
   def destroy
     @booking = Booking.find(params[:id])
     # we must authorize the booking using pundit after its created. we'll redirect to the bookings page after its deleted.

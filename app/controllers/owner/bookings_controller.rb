@@ -4,10 +4,17 @@ class Owner::BookingsController < ApplicationController
     # @rooms_bookings = Booking.all.each_with_object([]) do |booking, list|
     #   list << booking if booking.room.user == current_user # @owner_rooms.include?(booking.room)
     # end
-    @rooms_bookings = policy_scope([:owner, Booking])
+    @rooms_bookings = policy_scope([:owner, Booking]).sort
   end
 
   def update
-    # @rooms_bookings = policy_scope([:owner, Booking])
+
+    @booking = Booking.find(params[:id])
+    # need to authorize only within the owner scope / owner space
+    authorize([:owner, @booking])
+    @booking.status = params[:booking][:status]
+    if @booking.save
+      redirect_to owner_bookings_path
+    end
   end
 end

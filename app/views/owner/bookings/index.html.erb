@@ -19,12 +19,12 @@
             </div>
           </div>
           <div class="booking-status-card">
-            <%=simple_form_for booking, method: :patch do |f| %>
-              <%=f.input :status, as: :hidden, input_html: {value: "accepted"}, url: owner_bookings_path %>
+            <%=simple_form_for booking, url: owner_booking_path(booking) do |f| %> <!-- the url is specified on the FORM, and its owner_booking (no s) -->
+              <%=f.input :status, as: :hidden, input_html: {value: "accepted"} %>
               <%=f.submit 'accept', class: 'btn btn-outline-primary custom'%>
             <%end%>
-            <%=simple_form_for booking, method: :patch do |f| %>
-              <%=f.input :status, as: :hidden, input_html: {value: "rejected"}, url: owner_bookings_path%>
+            <%=simple_form_for booking, url: owner_booking_path(booking) do |f| %>
+              <%=f.input :status, as: :hidden, input_html: {value: "rejected"}%>
               <%=f.submit 'reject', class: 'btn btn-outline-warning custom'%>
             <%end%>
           </div>
