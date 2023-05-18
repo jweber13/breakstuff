@@ -5,12 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Road+Rage&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Oswald", "Helvetica", "sans-serif";
-$headers-font: "Oswald", "Helvetica", "sans-serif";
+$body-font: "Work Sans", "Helvetica", "sans-serif";
+$headers-font: "Work Sans", "Helvetica", "sans-serif";
 $font-size: 1.3em;
 
-h1{
-font-size: 1.3 rem;
+h1 {
+font-size: 1.3rem;
+color: rgb(212, 155, 11);
 }
 
 // To use a font file (.woff) uncomment following lines
