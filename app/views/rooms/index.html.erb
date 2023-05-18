@@ -2,6 +2,19 @@
 <div class="container">
   <%= link_to "add a room", new_room_path%>
   <%= link_to "view bookings", bookings_path%>
+  <!-- TODO: Insert inside the `.container`, above the first `.row` -->
+  <div class="row justify-content-center">
+    <div class="col-sm-8 my-3">
+      <%= form_with url: rooms_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for a room"
+        %>
+        <%= submit_tag "Search", name: "", class: "btn btn-dark" %>
+      <% end %>
+    </div>
+  </div>
   <div class="container mt-3 i ">
     <div class="d-flex justify-content-center">
       <div class="col-8">

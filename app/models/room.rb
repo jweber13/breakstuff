@@ -6,4 +6,13 @@ class Room < ApplicationRecord
 
   validates_presence_of :name, :address, :story, :description, :capacity, :price
   validates :price, :capacity, numericality: { only_integer: true }
+
+  include PgSearch::Model
+  # multisearchable against: [:name, :description]
+
+  pg_search_scope :search_by_attributes,
+    against: [ :name, :description, :story, :address ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
