@@ -9,8 +9,10 @@ class Owner::BookingPolicy < ApplicationPolicy
       end
     end
 
-    def update?
-      true
-    end
+  end
+
+  def update?
+    # the room's user is the room's owner
+    record.room.user == user
   end
 end
