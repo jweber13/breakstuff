@@ -19,7 +19,7 @@
           <div class="card" style="min-width: 360px;">
             <div class="row p-2 m-3">
               <%= simple_form_for [@room, @booking] do |f|%>
-                <%= f.input :date %>
+                <%= f.input :date, html5: true, input_html: { min: Date.today} %>
                 <%= f.input :number_of_people %>
                 <%= f.submit 'book this room', class: "btn btn-primary" %>
               <% end %>
