@@ -9,9 +9,9 @@ $body-font: "Oswald", "Helvetica", "sans-serif";
 $headers-font: "Oswald", "Helvetica", "sans-serif";
 $font-size: 1.3em;
 
-h1 {
-font-size: 1.3rem;
-color: rgb(212, 155, 11);
+h1, h2, h3, p {
+font-size: 1.3 rem;
+color: whitesmoke;
 }
 
 // To use a font file (.woff) uncomment following lines
