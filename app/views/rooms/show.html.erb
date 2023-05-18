@@ -28,19 +28,19 @@
         <p>Price: <%=@room.price%>円 / day</p>
       </div>
     </div> -->
-    <div class="d-flex justify-content-center">
-      <h3 class='row mt-3'>book!</h3>
-        <div class=" container">
-          <div class="row card">
-            <div class="p-3">
-              <%= simple_form_for [@room, @booking] do |f|%>
-                <%= f.input :date %>
-                <%= f.input :number_of_people %>
-                <%= f.submit 'book this room', class: "btn btn-primary" %>
-              <% end %>
-            </div>
+      <div class="bookings-container">
+      <h2 class="text-center mt-3">Book this room?</h2>
+      <div class="container mt-3 d-flex justify-content-center">
+        <div class="card col-sm-8 col-md-6">
+          <div class="row p-3 m-3">
+            <%= simple_form_for [@room, @booking] do |f|%>
+              <%= f.input :date %>
+              <%= f.input :number_of_people %>
+              <%= f.submit 'book this room', class: "btn btn-primary" %>
+            <% end %>
           </div>
         </div>
+      </div>
     </div>
   </div>
   <div class="page-frame-footer">
