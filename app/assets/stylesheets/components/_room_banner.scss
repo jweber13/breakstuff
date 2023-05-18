@@ -2,31 +2,39 @@
 .room-banner {
   background-size: cover;
   background-position: center;
-  padding: 100px 100px;
+  padding: 16px 0 0;
   margin: auto 200px;
   font-family: Oswald ;
 }
 
 .room-banner h1 {
-  margin: 0;
+  margin-bottom: 80px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
 }
 
-.room-banner {
-  h2 {
+.room-banner h2 {
+
     margin: 0;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 24px;
     opacity: .8;
-  }
+
 }
 
-.room-banner h5 {
-  font-size: 20px;
+.room-banner h3 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+  opacity: .8;
+}
+
+.room-banner h4 {
+  font-size: 16px;
   color: white;
   opacity: .8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -34,6 +42,8 @@
 
 .room-banner-info {
   background-color: rgba(59, 58, 59, 0.6);
+  padding: 16px 48px 16px;
+  margin-top: 160px;
 }
 
 .bookings-container {
