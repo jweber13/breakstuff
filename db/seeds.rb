@@ -18,8 +18,8 @@ User.create(username: 'rashon', email: 'rashon@email.com', password: 'password',
 new_user3 = User.create(username: 'Kayla', email: 'kayla@email.com', password: 'password', password_confirmation: 'password')
 
 new_room = Room.new(
-  name: 'Shinsetsu Break Room',
-  address: '21 Taimei Bldg., 3 Chome-11-6 Roppongi, Minato City, Tokyo 106-0032',
+  name: 'Manequins',
+  address: 'Ginza, Tokyo 170-0002',
   story: 'In the heart of bustling Tokyo, there stood a remarkable refuge called "Shinsetsu Break Room." Nestled amidst
   the towering skyscrapers,
   it offered a sanctuary for those burdened by the weight of toxic coworkers and unrelenting workplace stress. You can break the mannequins as you wish.
@@ -30,7 +30,7 @@ new_room = Room.new(
 )
 
 new_room1 = Room.new(
-  name: 'Warehouse Break Room',
+  name: 'Warehouse',
   address: 'Shibuya, Tokyo 150-0002',
   story: 'This room  was an old warehouse that was converted into a break room. It is located in the heart of the city.
   A lot of people died here because of the toxic fumes. The previous owner was never found.',
@@ -51,7 +51,7 @@ new_room2 = Room.new(
 )
 
 new_room3 = Room.new(
-  name: 'Arcade to break',
+  name: 'Arcade junk',
   address: 'Shinjuku, Tokyo 160-0023',
   story: "The only gamers here now are ghosts. There are many tools at your disposal. Use bats, hammers, your fists, whatever is laying around!",
   description: "A defunct Game center",
@@ -60,7 +60,7 @@ new_room3 = Room.new(
 )
 
 new_room4 = Room.new(
-  name: 'Apple Store: come and break our shit',
+  name: 'Apple Store',
   address: 'Minato, Tokyo 105-6333',
   story: "Can't afford Apple's expensive stuff? Bought an iPad that's end-of-life a year after release? Come here and destroy everything.
   All the devices are functional. Please try them before!",
@@ -70,7 +70,7 @@ new_room4 = Room.new(
 )
 
 new_room5 = Room.new(
-  name: 'Japanese Pottery',
+  name: 'Japanese pottery',
   address: 'Taito, Kyoto 110-0005',
   story: 'This room is filled with fragile japanese pottery, painstakingly hand-crafted by Hiro Nakamura and displayed at
   the Tokyo museum of pottery. Come here to destroy everything and awake you soul.',
