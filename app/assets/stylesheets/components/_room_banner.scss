@@ -2,8 +2,8 @@
 .room-banner {
   background-size: cover;
   background-position: center;
-  padding: 200px 50px;
-  margin: auto 100px;
+  padding: 100px 100px;
+  margin: auto 200px;
   font-family: Oswald ;
 }
 
@@ -25,11 +25,15 @@
   }
 }
 
-.room-banner p {
+.room-banner h5 {
   font-size: 20px;
   color: white;
   opacity: .8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.room-banner-info {
+  background-color: rgba(59, 58, 59, 0.6);
 }
 
 .bookings-container {
