@@ -62,6 +62,7 @@ li.nav-item {
 .nav-item a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+  font-size: 20px !important;
 }
 
 .icon {
@@ -74,3 +75,16 @@ li.nav-item {
 div.hammer-header {
   display: flex;
 }
+
+.menu {
+  color: white;
+  font-size: 30px;
+}
+
+.dropdown-item {
+  color: rgb(0, 0, 0) !important;
+  opacity: 2 !important;
+}
+ .tags a {
+  color: white;
+ }

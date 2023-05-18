@@ -61,15 +61,17 @@ div.banner-info {
   color: #ffffff;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #180ad6;
+  background: #ffffff;
   transition: 0.3s ease;
   text-decoration: none;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 5px #fff;
 }
 
 .btn-flat:hover {
   background: #3429ff;
   color: white;
+  border: 1px;
 }
 
 .navbar-lewagon {
