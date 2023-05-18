@@ -3,7 +3,26 @@ class RoomsController < ApplicationController
     @rooms = policy_scope(Room)
     @owned_rooms = @rooms.where(user: current_user)
     @not_owned_rooms = @rooms.where.not(user: current_user)
+    # if params[:query].present?
+    #   sql_subquery = <<~SQL
+    #     rooms.name ILIKE :query
+    #     OR rooms.description ILIKE :query
+    #     OR rooms.story ILIKE :query
+    #     OR users.username ILIKE :query
+    #   SQL
+    #   @not_owned_rooms = @not_owned_rooms.joins(:user).where(sql_subquery, query: "%#{params[:query]}%")
+    # end
+    if params[:query].present?
+      @not_owned_rooms = Room.search_by_attributes(params[:query]).where.not(user: current_user)
+    end
   end
+
+  # def index
+  #   @movies = Movie.all
+  #   if params[:query].present?
+  #     @movies = @movies.where(title: params[:query])
+  #   end
+  # end
 
   def show
     @room = Room.find(params[:id])

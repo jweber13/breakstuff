@@ -16,7 +16,10 @@
             <div class="card-booking-infos">
               <h2><%=booking.room.name%></h2>
               <p>Booked by <strong>you</strong> on <strong><%=booking.date%></strong> for <%=booking.number_of_people%> people</p>
+            </div>
+            <div class="card-booking-status">
               <p>Status: <strong><%=booking.status%></strong></p>
+              <%= link_to "Cancel", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Cancel this booking?" } %>
             </div>
           </div>
         </div>
