@@ -1,7 +1,8 @@
 .room-banner {
   background-size: cover;
   background-position: center;
-  padding: 200px 0;
+  padding: 200px 50px;
+  margin: auto 100px;
 }
 
 .room-banner h1 {
@@ -25,4 +26,14 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.bookings-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto 240px;
+}
+
+.bookings-container h2 {
+  color: whitesmoke;
 }
