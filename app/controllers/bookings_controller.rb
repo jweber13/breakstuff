@@ -1,24 +1,15 @@
 class BookingsController < ApplicationController
 
-  # def new
-  #   @booking = Booking.new
-  #   @room = Room.find(params[:id])
-  #   authenticate(@booking)
-  # end
-
   def index
     @bookings = policy_scope(Booking)
   end
 
   def create
-    # raise
     @room = Room.find(params[:room_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.room = @room
-    # raise
     authorize(@booking)
-    # raise
     if @booking.save
       redirect_to rooms_path
     else
@@ -33,6 +24,14 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to owner_bookings_path
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    # we must authorize the booking using pundit after its created. we'll redirect to the bookings page after its deleted.
+    authorize(@booking)
+    @booking.destroy
+    redirect_to bookings_path
   end
 
   # strong params -> white listing the info coming from the form
