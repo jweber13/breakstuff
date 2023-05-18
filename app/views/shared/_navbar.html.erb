@@ -10,20 +10,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
-          <a class="tags text-light" href="#">About</a>
+          <div class="tags text-light"><%= link_to "Bookings",  "/bookings" %></div>
+        </li>
+        <li class="nav-item active">
+          <div class="tags text-light"><%= link_to "Listings",  "owner/bookings" %></div>
         </li>
         <li class="nav-item">
-          <a class="tags text-light" href="#" text-light>Contact</a>
+          <a class="tags text-light" href="#" text-light>About</a>
         </li>
-        <%# <li class="nav-item"> %>
-        <%# <a class="tags text-light" href="#" text-light>Login</a> %>
-        <%# </li> %>
-        <%# <li class="nav-item dropdown"> %>
-        <%# <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /> %>
-        <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+        <li class="nav-item">
+          <a class="tags text-light" href="#" text-light>Contact us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <i class="fa-solid fa-bars menu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier"></i>
+          <div class="dropdown-menu dropdown-menu-end menu-opacity" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"><%= link_to "Login", "/users/sign_in", class: "item-dark" %></a>
+            <a class="dropdown-item" data-turbo-method="delete" href="#"><%= link_to "Log Out", "/users/sign_out", class: "item-dark", data: {turbo_method: :delete} %></a>
           </div>
-        </li> %>
+        </li>
         <!--li class="nav-item"-->
         <!--/li-->
       </ul>
