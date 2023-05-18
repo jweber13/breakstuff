@@ -19,9 +19,15 @@ class BookingPolicy < ApplicationPolicy
     user_is_owner?
   end
 
+  def destroy?
+    # make sure that the user is the owner of the booking
+    user_is_owner?
+  end
+
   private
 
   def user_is_owner?
-    record.room.user == user
+    # the 'record' in this case is the booking, so 'record.user' is the owner of the booking. 'user' is the current user
+    record.user == user
   end
 end
