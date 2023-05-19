@@ -187,6 +187,33 @@ review1.user = new_user_joe
 review1.room = new_room_apple
 review1.save
 
+booking2 = Booking.new(date: Date.new(2023, 4, 1), number_of_people: 2)
+booking2.user = new_user_kayla
+booking2.room = new_room_flat
+booking2.save
+review2 = Review.new(content: "Ted is actually a nice guy, he let me destroy his living room, then we watched netflix")
+review2.user = new_user_kayla
+review2.room = new_room_flat
+review2.save
+
+# booking3 = Booking.new(date: Time.now, number_of_people: 2)
+# booking3.user = new_user_rashon
+# booking3.room = new_room_outdoor
+# booking3.save
+# review3 = Review.new(content: "No one told me there was a bear.")
+# review3.user = new_user_rashon
+# review3.room = new_room_outdoor
+# review3.save
+
+# booking4 = Booking.new(date: Date.new(2023, 2, 13), number_of_people: 2)
+# booking4.user = new_user_nico
+# booking4.room = new_room_outdoor
+# booking4.save
+# review4 = Review.new(content: "It was fun until the bear at my legs.")
+# review4.user = new_user_nico
+# review4.room = new_room_outdoor
+# review4.save
+
 new_room_dept.photo.attach(
   filename: 'Mexico-Mannequin',
   io: URI.open('https://res.cloudinary.com/dfv1szuzs/image/upload/v1684292577/Mexico-Mannequin-Plus-Size-Mannequin-with-Matt-Black-or-White-Color_i3itob.webp')
