@@ -43,24 +43,24 @@
             </div>
           </div>
           <div class="bookings-card">
-            <h2 class="text-center mt-3">Leave a review</h2>
-            <div class="container m-3 d-flex justify-content-center">
-              <div class="card" style="min-width: 360px;min-height: 260px">
-                <div class="row p-2 m-3">
-                  <%= render "reviews/new", room: @room, review: @review%>
+            <% if @room.bookings.any? { |b| b.user == current_user} %>
+              <h2 class="text-center mt-3">Leave a review</h2>
+              <div class="container m-3 d-flex justify-content-center">
+                <div class="card" style="min-width: 360px; min-height: 260px">
+                  <div class="row p-2 m-3">
+                    <%= render "reviews/new", room: @room, review: @review %>
+                  </div>
                 </div>
-                <!-- -->
               </div>
-            </div>
+            <% else%>
+              <h2 class="text-center mt-3">Make a booking to leave a review!</h2>
+            <% end %>
           </div>
         </div>
       </div>
     <%end%>
   </div>
-</div>
-</div>
-<div class="page-frame-footer">
-  <%= link_to "view rooms", rooms_path%>
-</div>
+  <div class="page-frame-footer">
+  </div>
 </div>
 </div>
