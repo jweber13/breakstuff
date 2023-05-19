@@ -3,6 +3,12 @@ class RoomsController < ApplicationController
     @rooms = policy_scope(Room)
     @owned_rooms = @rooms.where(user: current_user)
     @not_owned_rooms = @rooms.where.not(user: current_user)
+    @markers = @not_owned_rooms.geocoded.map do |room|
+      {
+        lat: room.latitude,
+        lng: room.longitude
+      }
+    end
     # if params[:query].present?
     #   sql_subquery = <<~SQL
     #     rooms.name ILIKE :query
