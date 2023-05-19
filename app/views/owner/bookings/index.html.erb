@@ -3,36 +3,40 @@
     <%= render 'shared/navbar'%>
   </div>
   <div class="page-frame-body">
+    <h1 class="book py-3">
+      <%= "You have #{@rooms_bookings.count} reservations" %>
+    </h1>
     <div class="container">
-      <%@rooms_bookings.each do |booking|%>
-        <div class="card-booking-container">
-          <div class="card-booking">
-            <% if booking.room.photo.key  %>
-              <%= cl_image_tag booking.room.photo.key, height: 120, width: 'auto', crop: :fill %>
-            <% else %>
-              <img src='https://res.cloudinary.com/dfv1szuzs/image/upload/v1684227581/development/fkzdohnna0ay3tsdb9iyykwrpknq.jpg' style='width: 400'>
-            <% end %>
+      <% @rooms_bookings.each do |booking| %>
+        <div class="card-booking">
+          <% if booking.room.photo.key %>
+            <%= cl_image_tag booking.room.photo.key, height: 120, crop: :fill %>
+          <% else %>
+            <img src='https://res.cloudinary.com/dfv1szuzs/image/upload/v1684227581/development/fkzdohnna0ay3tsdb9iyykwrpknq.jpg' style='width: 400'>
+          <% end %>
+          <div class="card-right">
             <div class="card-booking-infos">
-              <h2><%=booking.room.name%></h2>
-              <p>Booked by <strong><%=booking.user.username%></strong> on <strong><%=booking.date%></strong> for <%=booking.number_of_people%> people</p>
-              <p>Status: <strong><%=booking.status%></strong></p>
+              <h2><%= booking.room.name %></h2>
+              <p>Booked by <strong><%= booking.user.username %></strong> on <strong><%= booking.date %></strong> for <%= booking.number_of_people %> people</p>
+              <p>Status: <strong><%= booking.status %></strong></p>
+            </div>
+            <div class="booking-status-card">
+              <%= simple_form_for booking, url: owner_booking_path(booking) do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: "accepted" } %>
+                <%= f.submit 'accept', class: 'btn btn-outline-primary custom' %>
+              <% end %>
+              <%= simple_form_for booking, url: owner_booking_path(booking) do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: "rejected" } %>
+                <%= f.submit 'reject', class: 'btn btn-outline-warning custom' %>
+              <% end %>
             </div>
           </div>
-          <div class="booking-status-card">
-            <%=simple_form_for booking, url: owner_booking_path(booking) do |f| %> <!-- the url is specified on the FORM, and its owner_booking (no s) -->
-              <%=f.input :status, as: :hidden, input_html: {value: "accepted"} %>
-              <%=f.submit 'accept', class: 'btn btn-outline-primary custom'%>
-            <%end%>
-            <%=simple_form_for booking, url: owner_booking_path(booking) do |f| %>
-              <%=f.input :status, as: :hidden, input_html: {value: "rejected"}%>
-              <%=f.submit 'reject', class: 'btn btn-outline-warning custom'%>
-            <%end%>
-          </div>
         </div>
-      <%end%>
+        <!-- card-booking -->
+      <% end %>
     </div>
   </div>
   <div class="page-frame-footer">
-    <%= link_to "view rooms", rooms_path%>
+    <%= link_to "view rooms", rooms_path %>
   </div>
 </div>
