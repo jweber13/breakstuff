@@ -6,7 +6,8 @@ class RoomsController < ApplicationController
     @markers = @not_owned_rooms.geocoded.map do |room|
       {
         lat: room.latitude,
-        lng: room.longitude
+        lng: room.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {room:})
       }
     end
     # if params[:query].present?
