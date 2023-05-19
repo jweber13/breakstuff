@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.room = @room
     authorize(@booking)
     if @booking.save
-      redirect_to rooms_path
+      redirect_to bookings_path
     else
       render "rooms/show", status: :unprocessable_entity
     end
