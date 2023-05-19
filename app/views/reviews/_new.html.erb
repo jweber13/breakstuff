@@ -1,0 +1,9 @@
+<%# partial %>
+<%= simple_form_for([room, review],
+                          data: {insert_in_list_target: "form",
+                          action: "submit->insert-in-list#send"
+                          }) do |f|
+                         %>
+<%= f.input :content %>
+<%= f.button :submit %>
+<% end %>

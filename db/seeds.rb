@@ -20,7 +20,7 @@ new_user3 = User.create(username: 'Kayla', email: 'kayla@email.com', password: '
 
 new_room = Room.new(
   name: 'Manequins',
-  address: 'Ginza, Tokyo 170-0002',
+  address: 'Tokyo, Shinjuku,Tomihisachō 8-19',
   story: 'In the heart of bustling Tokyo, there stood a remarkable refuge called "Shinsetsu Break Room." Nestled amidst
   the towering skyscrapers,
   it offered a sanctuary for those burdened by the weight of toxic coworkers and unrelenting workplace stress. You can break the mannequins as you wish.
@@ -32,7 +32,7 @@ new_room = Room.new(
 
 new_room1 = Room.new(
   name: 'Warehouse',
-  address: 'Shibuya, Tokyo 150-0002',
+  address: 'Chiba, Futtsu, Aoki, 1-5-1',
   story: 'This room  was an old warehouse that was converted into a break room. It is located in the heart of the city.
   A lot of people died here because of the toxic fumes. The previous owner was never found.',
   description: 'This room contains a lot of old furniture. You can break them as you wish. You can also bring your own
@@ -43,7 +43,7 @@ new_room1 = Room.new(
 
 new_room2 = Room.new(
   name: "My ex-boyfriend's apartment. Fuck you Charlie",
-  address: 'Chiyoda, Tokyo 100-0005',
+  address: 'Kanagawa, Yokohama, Naka, Chojamachi, 4-11-14',
   story: 'Destroy all the expensive in this appartment. Destroy the cheap stuff too. You can also bring
   your own expensive stuff. All I ask is that you let me watch and maybe bring some wine.',
   description: "Caught my bf cheating on me. Go crazy on his nice apartment.",
@@ -52,8 +52,8 @@ new_room2 = Room.new(
 )
 
 new_room3 = Room.new(
-  name: 'Arcade junk',
-  address: 'Shinjuku, Tokyo 160-0023',
+  name: 'Arcade',
+  address: 'Kanagawa, Yokosuka, Fukadadai, 50',
   story: "The only gamers here now are ghosts. There are many tools at your disposal. Use bats, hammers, your fists, whatever is laying around!",
   description: "A defunct Game center",
   capacity: 2,
@@ -62,7 +62,7 @@ new_room3 = Room.new(
 
 new_room4 = Room.new(
   name: 'Apple Store',
-  address: 'Minato, Tokyo 105-6333',
+  address: 'Tokyo, Chuo, Ginza, 8-9-7',
   story: "Can't afford Apple's expensive stuff? Bought an iPad that's end-of-life a year after release? Come here and destroy everything.
   All the devices are functional. Please try them before!",
   description: "Apple Devices are planned obsolescence. Let's make their store obsolete too.",
@@ -72,7 +72,7 @@ new_room4 = Room.new(
 
 new_room5 = Room.new(
   name: 'Japanese pottery',
-  address: 'Taito, Kyoto 110-0005',
+  address: 'Tochigi, Utsunomiya, Chuo, 5-1-14',
   story: 'This room is filled with fragile japanese pottery, painstakingly hand-crafted by Hiro Nakamura and displayed at
   the Tokyo museum of pottery. Come here to destroy everything and awake you soul.',
   description: "Containing Pottery crafted by the legendary Hiro Nakamura",
@@ -85,7 +85,7 @@ new_room5 = Room.new(
 
 new_room6 = Room.new(
   name: "Ted Jenkins' Uptown Flat",
-  address: '18-2, Kyobashi 2-chome, Tokyo',
+  address: 'Ibaraki, Hitachi, Kashimacho, 1-20',
   story: "I spent a lot of money on this flat so I could invite friends over, and noone wants to hang out with me, so its going to waste. If you're down we can watch some movies and have pizza first! Please hang out with me.",
   description: "Small flat with big potential",
   capacity: 4,
@@ -94,7 +94,7 @@ new_room6 = Room.new(
 
 new_room7 = Room.new(
   name: "Jewelry Shop",
-  address: '244-1270, Yunohana, Fukushima',
+  address: 'Gunma, Fujioka, Hongo, 876-4',
   story: "Tried to buy an engagement ring from here but it was too expensive. Let's liberate all their rings from them",
   description: "Shiny, expensive, and read to be destroyed",
   capacity: 5,
