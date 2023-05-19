@@ -9,7 +9,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
+        <% if current_user.present? %>
           <li class="nav-item active">
             <div class="tags text-light"><%= link_to "Browse Rage Rooms",  "/rooms", class: "underlined" %></div>
           </li>
@@ -29,7 +29,7 @@
         <li class="nav-item dropdown">
           <i class="fa-solid fa-bars menu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier"></i>
           <div class="dropdown-menu dropdown-menu-end menu-opacity" aria-labelledby="navbarDropdown" style="none">
-            <p><%= current_user.username %></p>
+            <p><%= current_user.username if current_user.present?%></p>
             <a class="dropdown-item" href="#"><%= link_to "Add a room", "/rooms/new", class: "item-dark" %></a>
             <a class="dropdown-item" href="#"><%= link_to "Login", "/users/sign_in", class: "item-dark" %></a>
             <a class="dropdown-item" data-turbo-method="delete" href="#"><%= link_to "Log Out", "/users/sign_out", class: "item-dark", data: {turbo_method: :delete} %></a>
