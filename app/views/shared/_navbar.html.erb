@@ -9,6 +9,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
         <li class="nav-item active">
           <div class="tags text-light"><%= link_to "Browse Rage Rooms",  "/rooms", class: "underlined" %></div>
         </li>
@@ -18,6 +19,7 @@
         <li class="nav-item active">
           <div class="tags text-light"><%= link_to "Hosted Bookings",  "owner/bookings", class: "underlined" %></div>
         </li>
+        <% end %>
         <li class="nav-item">
           <a class="tags underlined" href="#" text-light>About</a>
         </li>

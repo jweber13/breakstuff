@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     @review.room = @room
     authorize(@review)
+    # raise
     if @review.save
       redirect_to rooms_path
     else
