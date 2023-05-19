@@ -14,7 +14,7 @@
               <%= image_tag 'https://res.cloudinary.com/dfv1szuzs/image/upload/v1684227581/development/fkzdohnna0ay3tsdb9iyykwrpknq.jpg', alt: "text", style: 'width: 400px' %>
             <% end %>
             <div class="card-booking-infos">
-              <h2><%=booking.room.name%></h2>
+              <h2><%=link_to booking.room.name, room_path(booking.room)%></h2>
               <p>Booked by <strong>you</strong> on <strong><%=booking.date%></strong> for <%=booking.number_of_people%> people</p>
             </div>
             <div class="card-booking-status">

@@ -16,7 +16,7 @@
           <% end %>
           <div class="card-right">
             <div class="card-booking-infos">
-              <h2><%=booking.room.name%></h2>
+              <h2><%=link_to booking.room.name, room_path(booking.room)%></h2>
               <p>Booked by <strong><%=booking.user.username%></strong> on <strong><%=booking.date%></strong> for <%=booking.number_of_people%> people</p>
               <p>Status: <strong><%=booking.status%></strong></p>
             </div>
