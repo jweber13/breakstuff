@@ -5,7 +5,6 @@
   <div class="page-frame-body">
     <div class="container">
       <div class="row justify-content-center">
-        <%= link_to "Click here to add a room if you want it to be be smashed by some random folks", new_room_path, class: "btn btn-secondary col-12 my-3"%>
         <div class="col-sm-8 my-3">
           <%= form_with url: rooms_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query,
