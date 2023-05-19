@@ -10,12 +10,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <div class="tags text-light"><%= link_to "Bookings", "/bookings", class: "underlined" %></div>
-          </li>
-          <li class="nav-item active">
-            <div class="tags text-light"><%= link_to "Hosted Bookings",  "/owner/bookings", class: "underlined" %></div>
-          </li>
+        <li class="nav-item active">
+          <div class="tags text-light"><%= link_to "Browse Rage Rooms",  "/rooms", class: "underlined" %></div>
+        </li>
+        <li class="nav-item active">
+          <div class="tags text-light"><%= link_to "Bookings",  "/bookings", class: "underlined" %></div>
+        </li>
+        <li class="nav-item active">
+          <div class="tags text-light"><%= link_to "Hosted Bookings",  "owner/bookings", class: "underlined" %></div>
+        </li>
         <% end %>
         <li class="nav-item">
           <a class="tags underlined" href="#" text-light>About</a>
@@ -26,6 +29,7 @@
         <li class="nav-item dropdown">
           <i class="fa-solid fa-bars menu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier"></i>
           <div class="dropdown-menu dropdown-menu-end menu-opacity" aria-labelledby="navbarDropdown" style="none">
+            <a class="dropdown-item" href="#"><%= link_to "Add a room", "/rooms/new", class: "item-dark" %></a>
             <a class="dropdown-item" href="#"><%= link_to "Login", "/users/sign_in", class: "item-dark" %></a>
             <a class="dropdown-item" data-turbo-method="delete" href="#"><%= link_to "Log Out", "/users/sign_out", class: "item-dark", data: {turbo_method: :delete} %></a>
           </div>
