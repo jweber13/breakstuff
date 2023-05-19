@@ -33,6 +33,7 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @booking = Booking.new
+    @review = Review.new
     authorize @room
     # authorize @booking
   end
