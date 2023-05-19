@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :rooms, only: %i[index show new create] do
     resources :bookings, only: %i[new create]
+    resources :reviews, only: %i[new create]
   end
   resources :bookings, except: %i[new create]
   namespace :owner do

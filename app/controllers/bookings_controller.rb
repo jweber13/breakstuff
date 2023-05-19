@@ -25,6 +25,7 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
+  private
   # strong params -> white listing the info coming from the form
   def booking_params
     params.require(:booking).permit(:date, :number_of_people)
