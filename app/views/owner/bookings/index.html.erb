@@ -2,9 +2,9 @@
   <div class="page-frame-header">
     <%= render 'shared/navbar'%>
   </div>
-  <div class="page-frame-body"> 
+  <div class="page-frame-body">
     <h1 class="book py-3">
-      <%= "You have #{@rooms_bookings.count} reservations" %>
+      <%= "You have #{@rooms_bookings.count} reservation#{@rooms_bookings.count > 1 || @rooms_bookings.count ==0 ? "s": ""}" %>
     </h1>
     <div class="container">
       <% @rooms_bookings.each do |booking|%>
